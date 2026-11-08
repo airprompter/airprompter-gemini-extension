@@ -50,3 +50,8 @@ Never print or request the token stored by Gemini CLI.
 Run `gemini extensions link <generated-extension-path>`, restart Gemini CLI,
 and verify the extension and MCP server with the commands above. Remove the
 link after validation if it should not remain installed.
+
+
+If the person only asked to run a workflow and did not ask for setup repair,
+stop after reporting what is missing and how to fix it; do not produce a
+substitute result.

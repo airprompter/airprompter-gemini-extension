@@ -1,0 +1,6 @@
+interface:
+  display_name: AirPrompter
+  short_description: Create and run AirPrompter workflows, skills, and prompts.
+  default_prompt: Use AirPrompter to run my saved workflow.
+policy:
+  allow_implicit_invocation: true

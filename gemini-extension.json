@@ -1,6 +1,6 @@
 {
   "name": "airprompter",
-  "version": "0.1.0",
+  "version": "0.2.3",
   "description": "Create, run, and improve AirPrompter workflows from Gemini CLI.",
   "contextFileName": "GEMINI.md",
   "mcpServers": {
