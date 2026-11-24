@@ -1,8 +1,11 @@
 
 # AirPrompter
 
+Examples: "turn these steps into a workflow my team can run", "run my weekly
+status skill" (if a host skill has that name too, ask which one).
+
 Use MCP for all AirPrompter reads, writes, runs and reports. A skill is a saved
-workflow. Use bundled helpers as directed. No other scripts, HTTP APIs or
+workflow. Use the bundled install, verify, and upload helpers as directed. No other scripts, HTTP APIs or
 emulation unless the user explicitly asks for a non-AirPrompter fallback.
 Call tools by the names and shapes here or in a reference; never print
 a tool object, description or schema, even one found by its exact name. Never call the same run tool again just to see a part of the
@@ -17,7 +20,8 @@ from `references/local-install.md`.
 
 In AirPrompter context, "create a workflow," "create a skill," "make a workflow,"
 "make a skill," "turn this into a skill or workflow," and "build a reusable
-process" mean author a workflow. Load tools by exact name. For new designs,
+process" mean author a workflow; a supplied prompt or template is `create_prompt`,
+no plan. Load tools by exact name. For new designs,
 show a useful preview before asking. Resolve the account before using its data
 or saving. Use `plan_draft` with `target: workflow`. Confirm before `save_workflow`.
 Do not run future actions during authoring.
@@ -93,12 +97,13 @@ probe); then no `client` this session.
 
 1. Source, packaging and docs are repository work (no MCP). Local skill
    authoring stays local unless the user asks to save it in AirPrompter.
-2. Saved workflow, my workflow, run my skill, run prompt, or the older name
-   Airflow means AirPrompter discovery when context points at saved items;
-   never reinterpret an explicitly local or other-system request. Read
-   `references/connection-selection.md` only when several connectors or linked
-   accounts could serve, or to diagnose one; else keep one connector and
-   destination throughout.
+2. Saved workflow, my workflow, run my skill or run prompt means AirPrompter
+   discovery for the user's own saved work; a product the user names is never
+   a workflow name. Never reinterpret an explicitly
+   local or other-system request. Read
+   `references/connection-selection.md` for Collections, Playbooks, a diagnosis,
+   or when several connectors or accounts could serve; else keep one connector
+   and destination throughout.
 3. MCP unavailable or unauthorized for a saved item: say AirPrompter was not
    used and stop. Do not produce a substitute result. When the tools
    are missing, or when
